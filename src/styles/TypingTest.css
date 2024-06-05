@@ -1,0 +1,125 @@
+.typing-test-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+.typing-test-box {
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+.typing-test-box.expand {
+    width: 100%;
+    max-width: 50%;
+    border-radius: 12px;
+}
+
+.typing-input {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    background-color: #ffffff20;
+    color: white;
+    font-size: 1.1em;
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+.typing-input:focus {
+    transform: scale(1.02);
+    border-color: #80d0c7;
+    box-shadow: 0 2px 8px #80d0c7;
+}
+
+.countdown-animation {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ff6b6b;
+    animation: fadeInOut 1s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+.results-display {
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.wpm-display {
+    font-size: 2.5em;
+    color: #80d0c7;
+    font-weight: bold;
+}
+
+.stats-display {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.wpm-stats {
+    color: #4ecdc4;
+}
+
+.timer-stats {
+    color: #ff6b6b;
+    transition: color 0.3s ease;
+}
+
+.timer-stats.urgent {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.retry-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #80d0c7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.retry-button:hover {
+    background-color: #4ecdc4;
+}
+
+
+@media(max-width:700px) {
+    .typing-test-box.expand {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 12px;
+    }    
+}
