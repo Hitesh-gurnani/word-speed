@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useRef, useState } from "react";
+import { forwardRef, useEffect, useRef, useState } from "react";
 import "../styles/TypingTest.css";
 
 const TypingTest = forwardRef<HTMLDivElement>((_props, ref) => {

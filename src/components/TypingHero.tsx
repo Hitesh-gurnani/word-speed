@@ -1,4 +1,3 @@
-import React from 'react';
 import '../styles/TypingHero.css'
 function TypingHero({ scrollToTest }: { scrollToTest: () => void }) {
     return (
